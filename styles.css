@@ -2,6 +2,7 @@
     --main: #f2eef5;
     --background: #fffffe;
     --headline: #181818;
+    --highlight: #994ff3;
 }
 
 * {
@@ -43,7 +44,7 @@ body {
 
 .container {
     display: flex;
-    justify-content: flex-start;  /* Align photo and text on the left */
+    justify-content: flex-start;  
     align-items: flex-start;
     max-width: 100%;
     width: 100%;
@@ -57,6 +58,7 @@ body {
     align-items: flex-start;
     margin-top: 40px;
     margin-left: 30px;
+    scroll-margin-top: 100px;
 }
 
 #about h1 {
@@ -69,7 +71,8 @@ body {
     font-size: 25px;
     margin-bottom: 100px;
     font-family: "Montserrat";
-    margin-top: 20px
+    margin-top: 20px;
+    line-height: 1.6;url(https://www.happyhues.co/palettes/15)
 }
 
 .download-button {
@@ -120,6 +123,67 @@ body {
     margin-right: 100px;
 }
 
+#skills{
+    padding: 30px;
+    margin-top: 75px;
+}
+
+#skills-about{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto; /* Center the content */
+}
+
+#skills-about h3{
+    font-size: 50px;
+    margin-left: 100px;
+}
+
+#skills-about h4{
+    margin-left: 100px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+    flex: 1;
+    font-family: "Montserrat";
+}
+
+.skills-boxes{
+    display: flex;
+    justify-content: space-around; /* Distribute boxes evenly */
+    align-items: stretch;
+    margin: 20px auto; 
+}
+
+.skill-box {
+    flex: 1;
+    margin: 30px 10px;
+    padding: 20px;
+    background-color: var(--background);
+    color: var(--headline);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    border: 2px solid var(--highlight);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in;
+}
+
+.skill-box h5{
+    font-size: 35px;
+}
+
+.skill-box p{
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.skill-box:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 footer{
     border-top: 3px solid var(--primary);
     color: var(--base-100);
@@ -154,6 +218,10 @@ footer{
     margin: 0px;
 }
 
+.skill-box i{
+    color: var(--highlight);
+}
+
 #contact .social-media:hover{
     transform: scale(1.3);
 }
@@ -186,9 +254,10 @@ footer{
     #about {
         align-items: flex-start;
         text-align: left;
-        margin-left: 10px;
+        margin-left: -5px;
         padding: 0 10px;
         margin-top: 0px;
+        scroll-margin-top: 70px;
     }
 
     #about h1 {
@@ -196,10 +265,12 @@ footer{
     }
 
     #about h2 {
+
         font-size: 20px;
     }
 
     .container p {
+        margin-top: 10px;
         font-size: 20px;
     }
 
@@ -209,4 +280,52 @@ footer{
         max-width: 95%;
         object-fit: contain;
     }
+
+    #contact{
+        justify-content: space-evenly;
+        align-items:center;
+    }
+
+    #skills{
+        scroll-margin-top: 50px;
+    }
+
+    #skills-about{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    #skills-about h3{
+        margin-left: -10px;
+        font-size: 30px;
+    }
+
+    #skills-about h4{
+        margin-top: 20px;
+        margin-left: -10px;
+        font-size: 20px;
+    }
+
+    .skills-boxes{
+        flex-direction: column;
+        
+    }
+
+    .skill-box{
+        margin: 10px 0;
+    }
+
+    h5{
+        font-size: 30px;
+    }
+
+    .skill-box p{
+        font-size: 20px;
+    }
+    
+    .skill-box:hover{
+        transform: none;
+    }
+
 }
